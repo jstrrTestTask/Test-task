@@ -1,0 +1,44 @@
+@import "../../variables.scss";
+
+.btn_root {
+  @media (min-width: $breakpointDesktop) {
+    margin: 0;
+    width: $controlsWidthDesktop;
+  }
+
+  @media (min-width: $breakpointTablet) and (max-width: $breakpointDesktop) {
+    width: $controlsWidthTablet;
+  }
+
+  @media (min-width: $breakpointMobile) and (max-width: $breakpointTablet) {
+    width: $controlsWidthMobile;
+  }
+
+  border-radius: 5px;
+  font-size: $fsizeNormal;
+  margin: 15px 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+button {
+  height: $mainItemHeight;
+
+  &.contained {
+    background-color: $bgBtnPrimary;
+    border: none;
+    color: $white;
+  }
+
+  &.outlined {
+    background-color: white;
+    border: $bdBtnPrimaryOutlined;
+    color: $bgBtnPrimary;
+  }
+}
